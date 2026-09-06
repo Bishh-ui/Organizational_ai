@@ -52,13 +52,25 @@ This system is particularly designed for organizational policy documents, bankin
 - **Deduplication**: Exact and semantic deduplication using FAISS
 - **Validation**: Strict quality checks for section numbers, policy names, and acronyms
 
-### 🖥️ Desktop Frontend
+### 🖥️ Frontend Options
+
+**Desktop Application:**
 - **Cross-Platform**: Built with `pywebview` for Windows, macOS, and Linux
-- **Interactive Chat**: Real-time RAG-enhanced question answering
+- **Native Experience**: Runs as a standalone desktop application
 - **User Management**: Login system with history tracking
 - **Admin Dashboard**: User statistics and login analytics
-- **File Upload**: Upload documents for training directly from the UI
-- **Modern UI**: Responsive design with HTML/CSS/JavaScript
+
+**Web Application (Gradio):**
+- **Browser-Based**: Access from any device with a web browser
+- **Cloud Deployment**: Deploy to Hugging Face Spaces for free hosting
+- **Mobile-Friendly**: Responsive design works on phones and tablets
+- **Same Features**: Chat, upload, login, and admin functionality
+
+Both interfaces provide:
+- 💬 Interactive chat with RAG-enhanced question answering
+- 📤 File upload for training documents (PDF/TXT)
+- 🔐 User authentication and session management
+- 👨‍💼 Admin dashboard (PIN: 9999)
 
 ### 🧪 Testing Infrastructure
 - **Unit Tests**: Comprehensive coverage for core components
@@ -116,7 +128,7 @@ graph TB
 | **Discriminators** | DistilBERT | Binary classifiers for quality validation |
 | **Retriever** | Sentence-Transformers | Semantic search for relevant context |
 | **Data Pipeline** | Qwen 7B (4-bit) | Automated Q&A pair generation |
-| **Frontend** | pywebview + HTML/CSS/JS | Cross-platform desktop application |
+| **Frontend** | pywebview + HTML/CSS/JS OR Gradio | Desktop app or web interface |
 | **RL Training** | REINFORCE | Policy gradient optimization |
 
 ---
@@ -231,6 +243,34 @@ python main.py
 - 📤 Document upload for training
 - 👨‍💼 Admin dashboard (PIN: 9999)
 - 📊 User statistics and login history
+
+### 3b. Running the Gradio Web App (Alternative)
+
+For web-based access or deployment to Hugging Face Spaces:
+
+```bash
+# Install dependencies
+pip install -r gradio_app/requirements.txt
+
+# Run locally
+python gradio_app/app.py
+```
+
+Then open http://localhost:7860 in your browser.
+
+**Features:**
+- 💬 **Chat Tab**: Ask questions about organizational policies with RAG-enhanced answers
+- 📄 **Upload Tab**: Upload PDF/TXT policy documents for training
+- 🔐 **Login Tab**: User authentication and session tracking
+- 🔧 **Admin Tab**: View user statistics (PIN: 9999)
+
+**Deploy to Hugging Face Spaces:**
+1. Create a new Space on [Hugging Face](https://huggingface.co/spaces)
+2. Select "Gradio" as the SDK
+3. Upload the contents of `gradio_app/` folder
+4. The app will automatically deploy!
+
+Alternatively, push the `gradio_app` folder to a Hugging Face Space repository.
 
 ### 4. Generating Q&A Data
 
