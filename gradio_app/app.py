@@ -1,5 +1,5 @@
 """
-AI4Org — Gradio web interface
+Organizational AI — Gradio web interface
 Drop-in replacement for the pywebview desktop frontend.
 Runs locally or on Hugging Face Spaces.
 """
@@ -123,12 +123,12 @@ CSS = """
 .tab-nav button { font-weight: 600; }
 """
 
-with gr.Blocks(css=CSS, title="AI4Org") as demo:
+with gr.Blocks(css=CSS, title="Organizational AI") as demo:
 
     # ── header ────────────────────────────────────────────────────────────────
     with gr.Row(elem_id="logo"):
         gr.HTML("""
-            <h1>🏦 AI4Org</h1>
+            <h1>🏦 Organizational AI</h1>
             <p>AI-powered policy assistant — grounded answers, no hallucinations</p>
         """)
 
@@ -216,7 +216,7 @@ with gr.Blocks(css=CSS, title="AI4Org") as demo:
             )
 
     gr.Markdown(
-        "<center><small>AI4Org — powered by TinyLlama + RAG | "
+        "<center><small>Organizational AI — powered by TinyLlama + RAG | "
         "<a href='https://huggingface.co/' target='_blank'>Hugging Face Spaces</a></small></center>"
     )
 

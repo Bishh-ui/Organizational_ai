@@ -1,5 +1,5 @@
 ---
-title: AI4Org
+title: Organizational AI
 emoji: 🏦
 colorFrom: blue
 colorTo: indigo
@@ -10,7 +10,7 @@ pinned: false
 license: mit
 ---
 
-# AI4Org — Policy Assistant
+# Organizational AI — Policy Assistant
 
 AI-powered Q&A over organizational policy documents.  
 Grounded answers via RAG (Retrieval-Augmented Generation) + TinyLlama fine-tuned with REINFORCE RL.

@@ -1,8 +1,8 @@
 <div align="center">
 
-![AI4Org Logo](frontend/assets/images/logo.jpeg)
+![Organizational AI Logo](frontend/assets/images/logo.jpeg)
 
-# AI4Org: Hallucination Reduction & Data Pipeline
+# Organizational AI: Hallucination Reduction & Data Pipeline
 
 **An advanced system for reducing hallucinations in Large Language Models using RAG, Discriminator-Guided Reinforcement Learning, and robust data generation pipelines.**
 
@@ -19,7 +19,7 @@
 
 ## 📋 Overview
 
-**AI4Org** is a comprehensive machine learning system designed to tackle one of the most critical challenges in modern AI: **hallucinations in Large Language Models (LLMs)**. The project combines cutting-edge techniques including:
+**Organizational AI** is a comprehensive machine learning system designed to tackle one of the most critical challenges in modern AI: **hallucinations in Large Language Models (LLMs)**. The project combines cutting-edge techniques including:
 
 - **Retrieval-Augmented Generation (RAG)** with semantic search
 - **Multi-Discriminator Architecture** for factuality, style, and safety validation
@@ -134,8 +134,8 @@ graph TB
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/merledu/ai4org.git
-   cd ai4org
+   git clone https://github.com/Bishh-ui/Organizational_ai.git
+   cd Organizational_ai
    ```
 
 2. **Create a virtual environment**
@@ -269,7 +269,7 @@ We have detailed documentation for each component of the system:
 ### Project Structure
 
 ```
-ai4org/
+Organizational_ai/
 ├── 📂 docs/                         # 📚 Project documentation
 ├── 📂 hallucination_reduction/      # Core ML pipeline
 ├── 📂 data_generation_pipeline/     # Q&A generation system
@@ -450,9 +450,9 @@ This project is open-source and available under the MIT License. See [LICENSE](L
 
 ## 📧 Contact & Support
 
-- **Issues**: [GitHub Issues](https://github.com/merledu/ai4org/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/merledu/ai4org/discussions)
-- **Organization**: [MeRL-EDU](https://github.com/merledu)
+- **Issues**: [GitHub Issues](https://github.com/Bishh-ui/Organizational_ai/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Bishh-ui/Organizational_ai/discussions)
+- **Developer**: [Bishh-ui](https://github.com/Bishh-ui)
 
 ---
 
@@ -473,7 +473,7 @@ This project is open-source and available under the MIT License. See [LICENSE](L
 
 <div align="center">
 
-**Built with ❤️ by the MeRL-EDU Team**
+**Built with ❤️ for Organizational Excellence**
 
 ⭐ Star us on GitHub — it motivates us a lot!
 
