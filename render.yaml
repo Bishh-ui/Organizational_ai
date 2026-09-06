@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: organizational-ai
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: pip install -r gradio_app/requirements.txt
+    startCommand: python gradio_app/app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: PORT
+        value: 10000
+      - key: ADMIN_PIN
+        value: 9999
+    disk:
+      name: model-cache
+      mountPath: /opt/render/.cache
+      sizeGB: 2

@@ -10,8 +10,10 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![Transformers](https://img.shields.io/badge/🤗-Transformers-yellow)](https://huggingface.co/transformers/)
 [![License](https://img.shields.io/badge/license-Open%20Source-green.svg)](LICENSE)
+[![Deploy on Render](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render)](https://render.com)
+[![Gradio](https://img.shields.io/badge/Gradio-4.20-orange?logo=gradio)](https://gradio.app)
 
-[Features](#-features) • [Architecture](#-architecture) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Contributing](#-contributing)
+[Features](#-features) • [Architecture](#-architecture) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Deployment](#-deployment) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
 </div>
 
@@ -264,13 +266,22 @@ Then open http://localhost:7860 in your browser.
 - 🔐 **Login Tab**: User authentication and session tracking
 - 🔧 **Admin Tab**: View user statistics (PIN: 9999)
 
-**Deploy to Hugging Face Spaces:**
-1. Create a new Space on [Hugging Face](https://huggingface.co/spaces)
-2. Select "Gradio" as the SDK
-3. Upload the contents of `gradio_app/` folder
-4. The app will automatically deploy!
+**Deploy to Cloud:**
 
-Alternatively, push the `gradio_app` folder to a Hugging Face Space repository.
+Multiple deployment options available:
+- **Render** (recommended): Free tier with 512MB RAM, auto-deploy from GitHub
+- **Hugging Face Spaces**: Free with optional GPU, perfect for ML apps
+- **Railway**: Similar to Render, easy setup
+- **Docker**: Self-host on your own server
+
+📖 **See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions for all platforms.**
+
+Quick deploy to Render:
+1. Push code to GitHub (already done ✅)
+2. Go to [Render Dashboard](https://dashboard.render.com)
+3. Click "New +" → "Blueprint"
+4. Connect your repo and click "Apply"
+5. Wait 5-10 minutes for deployment
 
 ### 4. Generating Q&A Data
 
@@ -293,6 +304,39 @@ python -m cli run \
 5. Evidence sentence extraction
 6. Semantic deduplication
 7. Quality validation
+
+---
+
+## 🌐 Deployment
+
+Deploy the Gradio web app to the cloud for public access:
+
+### Render (Recommended - Free Tier)
+```bash
+# Already configured with render.yaml
+# Just connect your GitHub repo to Render
+```
+1. Go to [Render Dashboard](https://dashboard.render.com)
+2. Click "New +" → "Blueprint"
+3. Connect `Bishh-ui/Organizational_ai` repo
+4. Click "Apply" - Done! 🎉
+
+**Features:**
+- ✅ Free 512MB RAM tier
+- ✅ Auto-deploy from GitHub
+- ✅ Free SSL certificate
+- ⚠️ Spins down after 15min inactivity
+
+### Other Options
+
+| Platform | Free Tier | GPU | Best For |
+|----------|-----------|-----|----------|
+| **Render** | ✅ 512MB | ❌ | General web apps |
+| **Hugging Face Spaces** | ✅ Unlimited | ✅ (paid) | ML applications |
+| **Railway** | ✅ $5 credit | ❌ | Quick prototypes |
+| **Docker** | N/A | Depends | Self-hosting |
+
+📖 **Full deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ---
 
